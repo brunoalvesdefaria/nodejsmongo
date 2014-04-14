@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-var debug = require('debug')('my-application');
 
-var service = require('../service/service');
-var serviceServer = service.listen(8080, function() {
-  debug('Service server listening on port ' + serviceServer.address().port);
-});
-
-var wepapp = require('../webapp/webapp');
-var webappServer = wepapp.listen(80, function() {
-  debug('Webapp server listening on port ' + webappServer.address().port);
-});
+require('../service/bin/www');
+require('../webapp/bin/www');

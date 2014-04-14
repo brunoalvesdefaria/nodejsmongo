@@ -1,0 +1,27 @@
+{>"global/templates/base"/}
+
+{<pageHead}
+	{>"global/css"/}
+{/pageHead}
+
+{<pageScripts}
+	{>"global/js"/}
+{/pageScripts}
+
+{<pageTitle}
+	{settings.pageTitle}
+	{?pageSubtitle} - {pageSubtitle}{/pageSubtitle}
+{/pageTitle}
+
+{<pageBody}
+	<div id="body-header">
+		{>"global/templates/main/menu"/}
+		{+bodyHeader/}
+	</div>
+	<div id="body-content" class="container">
+		{+bodyContent/}
+	</div>
+	<div id="body-footer">
+		{+bodyFooter/}
+	</div>
+{/pageBody}

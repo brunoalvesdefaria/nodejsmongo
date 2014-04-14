@@ -1,0 +1,13 @@
+{>"global/templates/main/index"/}
+
+{<bodyFooter}
+	{>"home/footer"/}
+{/bodyFooter}
+
+{<mainMenu}
+	{>"home/menu"/}
+{/mainMenu}
+
+{<bodyContent}
+	{+mainContent/}
+{/bodyContent}

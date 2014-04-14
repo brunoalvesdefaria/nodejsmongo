@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{+pageTitle/}</title>
+		{+pageHead/}
+	</head>
+	<body>
+		{+pageBody/}
+		{+pageScripts/}
+	</body>
+</html>

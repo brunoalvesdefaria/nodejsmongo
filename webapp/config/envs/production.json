@@ -1,0 +1,5 @@
+{
+	"type": "production",
+	"httpPort": "80",
+	"pageTitle": "Node.js & MongoDB"
+}

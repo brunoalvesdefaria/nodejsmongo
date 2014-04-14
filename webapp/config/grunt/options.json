@@ -1,0 +1,79 @@
+{
+	"copy": {
+		"js": {
+			"development": [
+				"lib/jquery/dist/jquery.js",
+				"lib/bootstrap/dist/js/bootstrap.js"
+			],
+			"production": [
+				"lib/jquery/dist/jquery.min.js",
+				"lib/bootstrap/dist/js/bootstrap.min.js"
+			]
+		},
+		"css": {
+			"development": [
+				"lib/bootstrap/dist/css/bootstrap.css",
+				"lib/bootstrap/dist/css/bootstrap-theme.css"
+			],
+			"production": [
+				"lib/bootstrap/dist/css/bootstrap.min.css",
+				"lib/bootstrap/dist/css/bootstrap-theme.min.css"
+			]
+		},
+		"fonts": [
+			"lib/bootstrap/dist/fonts/*"
+		]
+	},
+	"concat": {
+		"css": [
+			"public/css/lib/bootstrap.css",
+			"public/css/lib/bootstrap-theme.css",
+			"public/css/base.css"
+		],
+		"js": [
+			"public/js/lib/jquery.js",
+			"public/js/lib/bootstrap.js"
+		]
+	},
+	"sass": {
+		"watch": {
+			"httpPath": "/",
+			"sassDir": "src/sass",
+			"specify": [
+				"src/sass/base.scss"
+			],
+			"cssDir": "public/css",
+			"imagesDir": "public/img",
+			"javascriptsDir": "public/js",
+			"fontsDir": "public/css/fonts",
+			"require": [],
+			"watch": true
+		},
+		"development": {
+			"httpPath": "/",
+			"sassDir": "src/sass",
+			"specify": [
+				"src/sass/base.scss"
+			],
+			"cssDir": "public/css",
+			"imagesDir": "public/img",
+			"javascriptsDir": "public/js",
+			"fontsDir": "public/css/fonts",
+			"require": [],
+			"force": true
+		},
+		"production": {
+			"httpPath": "//localhost/",
+			"sassDir": "src/sass",
+			"specify": [
+				"src/sass/base.scss"
+			],
+			"cssDir": "public/css",
+			"imagesDir": "public/img",
+			"javascriptsDir": "public/js",
+			"fontsDir": "public/css/fonts",
+			"require": [],
+			"force": true
+		}
+	}
+}

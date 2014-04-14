@@ -1,1 +1,6 @@
 node_modules
+service/node_modules
+webapp/.sass-cache
+webapp/lib
+webapp/node_modules
+webapp/public

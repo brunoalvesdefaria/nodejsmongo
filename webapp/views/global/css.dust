@@ -1,0 +1,10 @@
+{@select key="{settings.env}"}
+	{@eq value="production"}
+		<link rel="stylesheet" href="/css/style.css" />
+	{/eq}
+	{@default}
+		<link rel="stylesheet" href="/css/lib/bootstrap.css" />
+		<link rel="stylesheet" href="/css/lib/bootstrap-theme.css" />
+		<link rel="stylesheet" href="/css/base.css" />
+	{/default}
+{/select}
