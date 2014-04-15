@@ -1,0 +1,104 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M0 0h256v256h-256zM384 64h640v128h-640zM0 384h256v256h-256zM384 448h640v128h-640zM0 768h256v256h-256zM384 832h640v128h-640z"
+				],
+				"tags": [
+					"list",
+					"bullet",
+					"ul",
+					"todo",
+					"menu"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 180,
+				"order": 1,
+				"prevSize": 16,
+				"code": 58881,
+				"name": "list",
+				"ligatures": ""
+			},
+			"setIdx": 1,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M960 256c35.346 0 64-28.654 64-64v-128h-128v-64h-832c-35.2 0-64 28.798-64 64v896c0 35.2 28.796 64 64 64h832v-256h64c35.346 0 64-28.654 64-64v-128h-128v-64h64c35.346 0 64-28.654 64-64v-128h-128v-64h64zM576 256.33c70.51 0 127.67 57.16 127.67 127.67s-57.16 127.67-127.67 127.67c-70.51 0-127.67-57.16-127.67-127.67s57.16-127.67 127.67-127.67zM256 960h-64v-896h64v896zM768 768h-384v-64c0-70.694 57.308-128 128-128v0h128c70.696 0 128 57.306 128 128v64z"
+				],
+				"tags": [
+					"address-book",
+					"book",
+					"contacts"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 62,
+				"order": 2,
+				"prevSize": 16,
+				"code": 58880,
+				"name": "address-book",
+				"ligatures": ""
+			},
+			"setIdx": 1,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M922.592 608.608l-90.88-90.912v474.304c0 17.696-14.272 32-31.968 32h-127.872c-17.696 0-31.968-14.304-31.968-32v-383.808c0-17.696-14.304-32-32-32h-191.84c-17.664 0-31.968 14.304-31.968 32v383.808c0 17.696-14.336 32-31.968 32h-127.872c-17.664 0-32-14.304-32-32v-474.304l-90.88 90.912-101.376-101.44 506.944-507.168 5.056 5.056 5.056-5.056 250.72 250.848v-186.432h127.904v314.4l128.32 128.352-101.408 101.44z"
+				],
+				"grid": 16,
+				"tags": [
+					"home"
+				]
+			},
+			"properties": {
+				"order": 3,
+				"id": 0,
+				"prevSize": 16,
+				"code": 58882,
+				"name": "home",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 0
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"showMetrics": false,
+			"showMetadata": false,
+			"showVersion": false,
+			"resetPoint": 58880
+		},
+		"imagePref": {},
+		"historySize": 100,
+		"showCodes": true,
+		"search": "",
+		"gridSize": 16
+	}
+}

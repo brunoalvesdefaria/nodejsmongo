@@ -1,6 +1,7 @@
 node_modules
 service/node_modules
 webapp/.sass-cache
-webapp/lib
+webapp/lib/*
+!webapp/lib/icomoon
 webapp/node_modules
 webapp/public

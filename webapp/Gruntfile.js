@@ -87,6 +87,19 @@ module.exports = function(grunt) {
 			}
 		},
 
+		replace: {
+			icomoon: {
+				src: options.replace.icomoon.src,
+				dest: options.replace.icomoon.dest,
+				replacements: [
+					{
+						from: "url('fonts/",
+						to: "url('/css/fonts/"
+					}
+				]
+			}
+		},
+
 		clean: {
 			files: [
 				"public/**/*"
@@ -124,12 +137,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("grunt-text-replace");
 
 	grunt.registerTask(
 		"postInstall",
 		[
 			"shell:environment",
 			"clean",
+			"replace",
 			"copy:cssDevelopment",
 			"copy:fonts",
 			"copy:jsDevelopment",
@@ -144,6 +159,7 @@ module.exports = function(grunt) {
 		[
 			"shell:environment",
 			"clean",
+			"replace",
 			"copy:cssDevelopment",
 			"copy:fonts",
 			"copy:jsDevelopment",
@@ -158,6 +174,7 @@ module.exports = function(grunt) {
 		[
 			"shell:environment",
 			"clean",
+			"replace",
 			"copy:cssProduction",
 			"copy:fonts",
 			"copy:jsProduction",

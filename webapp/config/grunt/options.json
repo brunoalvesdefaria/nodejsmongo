@@ -21,7 +21,8 @@
 			]
 		},
 		"fonts": [
-			"lib/bootstrap/dist/fonts/*"
+			"lib/bootstrap/dist/fonts/*",
+			"lib/icomoon/fonts/*"
 		]
 	},
 	"concat": {
@@ -34,6 +35,12 @@
 			"public/js/lib/jquery.js",
 			"public/js/lib/bootstrap.js"
 		]
+	},
+	"replace": {
+		"icomoon": {
+			"src": "lib/icomoon/style.css",
+			"dest": "public/css/lib/icomoon.css"
+		}
 	},
 	"sass": {
 		"watch": {

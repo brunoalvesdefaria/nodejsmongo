@@ -9,4 +9,6 @@ npm install -g bower
 #instalar ruby gems: ruby setup.rb
 gem install compass
 
+#instalar mongodb
+
 npm install
