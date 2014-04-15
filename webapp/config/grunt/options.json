@@ -29,6 +29,7 @@
 		"css": [
 			"public/css/lib/bootstrap.css",
 			"public/css/lib/bootstrap-theme.css",
+			"public/css/lib/icomoon.css",
 			"public/css/base.css"
 		],
 		"js": [
