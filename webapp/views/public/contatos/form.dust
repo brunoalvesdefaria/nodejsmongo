@@ -1,0 +1,31 @@
+<h2><i class="icon-address-book"></i> {#_id}Editar contato{:else}Novo contato{/_id}</h2>
+<div class="jumbotron">
+	<form id="form-contatos" class="form-horizontal" name="contatos" role="form" method="post" action="/service/contatos/novo">
+		<div class="form-group">
+			<label for="inputNome" class="col-sm-2 control-label">Nome</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputNome" name="nome" placeholder="Nome" value="{nome}">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail" value="{email}">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputTelefone" class="col-sm-2 control-label">Telefone</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputTelefone" name="telefone" placeholder="Telefone" value="{telefone}">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button id="btnSalvarContato" type="submit" class="btn btn-primary">Salvar</button>
+			</div>
+		</div>
+		{#_id}
+		<input type="hidden" name="_id" value="{_id}">
+		{/_id}
+	</form>
+</div>

@@ -38,6 +38,20 @@ module.exports = function(grunt) {
 				flatten: true,
 				ext: ".js"
 			},
+			jsPublic: {
+				cwd: "src/js/public/",
+				src: "**/*.js",
+				dest: "public/js/",
+				expand: true,
+				ext: ".js"
+			},
+			dustPublic: {
+				cwd: "views/",
+				src: "public/**/*.dust",
+				dest: "public/template/",
+				expand: true,
+				ext: ""
+			},
 			fonts: {
 				src: options.copy.fonts,
 				dest: "public/css/fonts/",
@@ -80,10 +94,6 @@ module.exports = function(grunt) {
 			css: {
 				src: options.concat.css,
 				dest: "public/css/style.css"
-			},
-			js: {
-				src: options.concat.js,
-				dest: "public/js/libs.js"
 			}
 		},
 
@@ -100,6 +110,42 @@ module.exports = function(grunt) {
 			}
 		},
 
+		uglify: {
+			require: {
+				options: {
+					mangle: {
+						except: ["requirejs", "require", "define"]
+					}
+				},
+				files: {
+					"lib/requirejs/require.min.js": ["lib/requirejs/require.js"]
+				},
+				preserveComments: "some"
+			},
+			backbone: {
+				options: {
+					mangle: {
+						except: ["Backbone", "_"]
+					}
+				},
+				files: {
+					"lib/backbone/backbone.min.js": ["lib/backbone/backbone.js"]
+				},
+				preserveComments: "some"
+			},
+			underscore: {
+				options: {
+					mangle: {
+						except: ["_"]
+					}
+				},
+				files: {
+					"lib/underscore/underscore.min.js": ["lib/underscore/underscore.js"]
+				},
+				preserveComments: "some"
+			}
+		},
+
 		clean: {
 			files: [
 				"public/**/*"
@@ -109,9 +155,15 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ["src/sass/**/*.scss"],
-				tasks: [
-					"compass:watch"
-				]
+				tasks: ["compass:watch"]
+			},
+			jsPublic: {
+				files: ["src/js/public/**/*.js"],
+				tasks: ["copy:jsPublic"]
+			},
+			dustPublic: {
+				files: ["views/public/**/*.dust"],
+				tasks: ["copy:dustPublic"]
 			}
 		},
 
@@ -136,32 +188,21 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-compass");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-concat");
+	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-text-replace");
-
-	grunt.registerTask(
-		"postInstall",
-		[
-			"shell:environment",
-			"clean",
-			"replace",
-			"copy:cssDevelopment",
-			"copy:fonts",
-			"copy:jsDevelopment",
-			"copy:envDevelopment",
-			"compass:default"
-		]
-	);
 
 	// Build Development
 	grunt.registerTask(
 		"buildDev",
 		[
-			"shell:environment",
+			"shell",
 			"clean",
 			"replace",
+			"copy:jsPublic",
 			"copy:cssDevelopment",
 			"copy:fonts",
+			"copy:dustPublic",
 			"copy:jsDevelopment",
 			"copy:envDevelopment",
 			"compass:development"
@@ -172,11 +213,14 @@ module.exports = function(grunt) {
 	grunt.registerTask(
 		"buildProd",
 		[
-			"shell:environment",
+			"shell",
 			"clean",
 			"replace",
+			"copy:jsPublic",
+			"uglify",
 			"copy:cssProduction",
 			"copy:fonts",
+			"copy:dustPublic",
 			"copy:jsProduction",
 			"copy:envProduction",
 			"compass:production",

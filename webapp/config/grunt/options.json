@@ -3,11 +3,19 @@
 		"js": {
 			"development": [
 				"lib/jquery/dist/jquery.js",
-				"lib/bootstrap/dist/js/bootstrap.js"
+				"lib/bootstrap/dist/js/bootstrap.js",
+				"lib/requirejs/require.js",
+				"lib/underscore/underscore.js",
+				"lib/backbone/backbone.js",
+				"lib/dustjs-linkedin/dist/dust-full.js"
 			],
 			"production": [
 				"lib/jquery/dist/jquery.min.js",
-				"lib/bootstrap/dist/js/bootstrap.min.js"
+				"lib/bootstrap/dist/js/bootstrap.min.js",
+				"lib/requirejs/require.min.js",
+				"lib/underscore/underscore.min.js",
+				"lib/backbone/backbone.min.js",
+				"lib/dustjs-linkedin/dist/dust-full.min.js"
 			]
 		},
 		"css": {
@@ -31,10 +39,6 @@
 			"public/css/lib/bootstrap-theme.css",
 			"public/css/lib/icomoon.css",
 			"public/css/base.css"
-		],
-		"js": [
-			"public/js/lib/jquery.js",
-			"public/js/lib/bootstrap.js"
 		]
 	},
 	"replace": {

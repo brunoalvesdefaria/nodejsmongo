@@ -5,3 +5,5 @@ var env = require('../config/env.json');
 var server = app.listen(env.httpPort, function() {
 	console.log('Webapp server listening on port ' + server.address().port);
 });
+
+module.exports = app;

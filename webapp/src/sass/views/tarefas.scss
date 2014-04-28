@@ -1,0 +1,39 @@
+.lista-tarefas {
+	margin-bottom: 20px;
+	.item {
+		@include border-radius(4px, 4px);
+		background-color: $gray5;
+		padding: 4px 16px;
+		margin: 8px 0;
+		cursor: pointer;
+		h3 {
+			padding-right: 20px;
+			position: relative;
+			&:hover:after {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: -10px;
+				font-family: 'icomoon';
+				font-size: 32px;
+				content: "\e606";
+				color: $gray50;
+			}
+		}
+		&.done{
+			h3 {
+				text-decoration: line-through;
+				&:after {
+					@extend h3:hover:after;
+					color: $success;
+				}
+			}
+		}
+		&:hover, &.active {
+			background-color: $gray30;
+		}
+		&.active:hover {
+			background-color: $gray40;
+		}
+	}
+}

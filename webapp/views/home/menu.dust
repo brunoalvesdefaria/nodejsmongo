@@ -1,5 +1,5 @@
-<li class="active">
-	<a href="#">
+<li>
+	<a href="#home">
 		<i class="icon-home"></i> Home
 	</a>
 </li>

@@ -1,0 +1,5 @@
+{>"home/index"/}
+
+{<mainContent}
+	{>"public/contatos/form"/}
+{/mainContent}

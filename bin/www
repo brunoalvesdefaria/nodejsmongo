@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-require('../service/bin/www');
-require('../webapp/bin/www');
+var service = require('../service/bin/www');
+var webapp = require('../webapp/bin/www');

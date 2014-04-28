@@ -1,9 +1,8 @@
 {@select key="{settings.env}"}
 	{@eq value="production"}
-		<script src="/js/libs.js"></script>
+		<script data-main="/js/app" src="/js/lib/require.js"></script>
 	{/eq}
 	{@default}
-		<script src="/js/lib/jquery.js"></script>
-		<script src="/js/lib/bootstrap.js"></script>
+		<script data-main="/js/app" src="/js/lib/require.js"></script>
 	{/default}
 {/select}

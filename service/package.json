@@ -11,7 +11,8 @@
 		"debug": "~0.7.4",
 		"consolidate": "~0.10.0",
 		"dustjs-linkedin": "*",
-		"dustjs-helpers": "*"
+		"dustjs-helpers": "*",
+		"mongoose": "~3.8.8"
 	},
 	"scripts": {
 		"start": "node ./bin/www"

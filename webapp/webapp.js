@@ -10,7 +10,7 @@ var env = require('./config/env.json');
 var cons = require('consolidate');
 var dust = require('./src/js/dust/helpers.js');
 
-var routes = require('./routes/root');
+var routes = require('./src/js/routes/root');
 
 var app = express();
 

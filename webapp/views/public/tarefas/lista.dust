@@ -1,0 +1,26 @@
+<h2><i class="icon-list"></i> Lista de tarefas</h2>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="btn-group">
+		<a href="#tarefas/novo" id="btnNovaTarefa" class="btn btn-primary">
+			<i class="icon-file"></i> Nova
+		</a>
+		<button id="btnEditarTarefa" class="btn btn-default" disabled="disabled">
+			<i class="icon-edit"></i> Editar
+		</button>
+		<button id="btnExcluirTarefa" class="btn btn-default" disabled="disabled">
+			<i class="icon-remove"></i> Excluir
+		</button>
+	</div>
+</nav>
+<div class="container-fluid lista-tarefas">
+	{#tarefas}
+	<div class="col-lg-3 col-md-4 col-sm-6">
+		<div class="item" data-id="{_id}">
+			<h3>{titulo}</h3>
+			<p>{descricao}</p>
+		</div>
+	</div>
+	{/tarefas}
+</div>
+
+{>"public/global/modalConfirmacao" id="confirmaExclusaoTarefa" titulo="Confirmar exclusão" mensagem="Tem certeza que deseja excluir a tarefa selecionada?" /}
