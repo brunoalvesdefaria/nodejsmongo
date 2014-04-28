@@ -20,6 +20,8 @@
 			<p>{descricao}</p>
 		</div>
 	</div>
+	{:else}
+	<h3>Nenhuma tarefa cadastrada</h3>
 	{/tarefas}
 </div>
 
