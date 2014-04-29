@@ -1,4 +1,6 @@
 var express = require('express');
+var compress = require('compression');
+
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -14,6 +16,9 @@ var routes = require('./src/js/routes/root');
 
 var app = express();
 
+// gzip responses
+app.use(compress());
+
 // environment setup
 app.set('env', env.type);
 app.set('pageTitle', env.pageTitle);
@@ -23,13 +28,13 @@ app.engine('dust', cons.dust);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'dust');
 
-app.use(favicon());
+app.use(favicon(__dirname + '/favicon.ico', {maxAge: 2592000000}));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {maxAge: 2592000000}));
 
 app.use('/', routes);
 

@@ -143,6 +143,18 @@ module.exports = function(grunt) {
 					"lib/underscore/underscore.min.js": ["lib/underscore/underscore.js"]
 				},
 				preserveComments: "some"
+			},
+			jsPublic: {
+				options: {
+					mangle: true
+				},
+				files: [{
+					expand: true,
+					cwd: "src/js/public/",
+					src: "**/*.js",
+					dest: "public/js/",
+					ext: ".js"
+				}]
 			}
 		},
 

@@ -1,4 +1,6 @@
 var express = require('express');
+var compress = require('compression');
+
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -11,6 +13,9 @@ var dust = require('dustjs-linkedin');
 var routes = require('./routes/index');
 
 var app = express();
+
+// gzip responses
+app.use(compress());
 
 // view engine setup
 app.engine('dust', cons.dust);
